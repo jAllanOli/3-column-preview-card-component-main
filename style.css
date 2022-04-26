@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+    background: var(--Very-light-gray);
+    font-family:'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    width: 90%;
+    margin-top: 2rem;
+}
+
+main article {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+main article h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 2rem 0;
+    font-size: 3rem;
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+}
+
+main article p {
+    margin-bottom: 2rem;
+    color: var(--Transparent-white);
+    line-height: 2rem;
+}
+
+main article img {
+    width: 4rem;
+}
+
+article.sedans {
+    background: var(--Bright-orange);
+}
+
+article.suv {
+    background: var(--Dark-cyan);
+}
+
+article.lux {
+    background: var(--Very-dark-cyan);
+}
+
+article button {
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    border: .15rem  solid transparent;
+    background: var(--Very-light-gray);
+}
+
+main article button:hover {
+    background-color: transparent;
+    border: .15rem solid var(--Very-light-gray);
+    cursor: pointer;
+    color: white;
+}
+
+.sedans button {
+    color: var(--Bright-orange);
+}
+
+.suv button {
+    color: var(--Dark-cyan);
+}
+
+.suv button {
+    color: var(--Very-dark-cyan);
+}
+
+.sedans {
+ border-top-left-radius: 1rem;
+ border-top-right-radius: 1rem;
+}
+
+.lux {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+@media (min-width: 1050px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        height: 35rem;
+        width: 80%;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .sedans{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .lux {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+
+    article {
+        justify-content: space-between;
+    }
+}
